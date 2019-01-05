@@ -20,6 +20,7 @@ FOUNDATION_EXPORT const unsigned char UIKitExtVersionString[];
 #import <UIKitExt/UIEWindow.h>
 #import <UIKitExt/UIEPasscodeViewController.h>
 #import <UIKitExt/UIELabel.h>
+#import <UIKitExt/UIEStoryboardSegue.h>
 
 // Deprecated
 
