@@ -7,7 +7,7 @@
 //
 
 #import "PageVC.h"
-#import <Helpers/Helpers.h>
+#import <FoundationExt/FoundationExt.h>
 
 static NSString *const PageSegue = @"Page";
 

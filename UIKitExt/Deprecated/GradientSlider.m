@@ -8,7 +8,7 @@
 
 #import "GradientSlider.h"
 #import "View.h"
-#import <Helpers/Helpers.h>
+#import <FoundationExt/FoundationExt.h>
 
 
 
