@@ -5,7 +5,6 @@
 //  Created by Dan Kalinin on 12/30/18.
 //
 
-#import <UIKit/UIKit.h>
 #import "UIEResponder.h"
 
 @class UIEView;

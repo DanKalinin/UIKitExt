@@ -5,8 +5,7 @@
 //  Created by Dan Kalinin on 12/31/18.
 //
 
-#import <UIKit/UIKit.h>
-#import <FoundationExt/FoundationExt.h>
+#import "UIEMain.h"
 
 @class UIEBarItem;
 @class UIEBarItemOperation;

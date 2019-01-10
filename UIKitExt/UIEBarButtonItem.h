@@ -5,7 +5,6 @@
 //  Created by Dan Kalinin on 12/31/18.
 //
 
-#import <UIKit/UIKit.h>
 #import "UIEBarItem.h"
 
 @class UIEBarButtonItem;
