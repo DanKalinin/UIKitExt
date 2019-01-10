@@ -63,7 +63,7 @@
 
 @interface UIEAlertActionOperation : NSEObjectOperation
 
-@property (readonly) HLPArray<UIEAlertActionDelegate> *delegates;
+@property (readonly) NSEOrderedSet<UIEAlertActionDelegate> *delegates;
 
 @property (weak, readonly) UIAlertAction *object;
 

@@ -58,7 +58,7 @@
 
 @interface UIEPasscodeViewOperation : UIEControlOperation <UIEPasscodeViewDelegate, UIEButtonDelegate>
 
-@property (readonly) HLPArray<UIEPasscodeViewDelegate> *delegates;
+@property (readonly) NSEOrderedSet<UIEPasscodeViewDelegate> *delegates;
 @property (readonly) NSMutableString *passcode;
 @property (readonly) UINotificationFeedbackGenerator *generator;
 

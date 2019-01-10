@@ -87,7 +87,7 @@
 
 @interface UIEControlOperation : UIEViewOperation <UIEControlDelegate>
 
-@property (readonly) HLPArray<UIEControlDelegate> *delegates;
+@property (readonly) NSEOrderedSet<UIEControlDelegate> *delegates;
 
 @property (weak, readonly) UIControl *object;
 @property (weak, readonly) UIEvent *event;

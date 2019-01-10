@@ -158,7 +158,7 @@
 
 @interface UIETextFieldOperation : UIEControlOperation <UIETextFieldDelegate, UITextFieldDelegate>
 
-@property (readonly) HLPArray<UIETextFieldDelegate> *delegates;
+@property (readonly) NSEOrderedSet<UIETextFieldDelegate> *delegates;
 
 @property (weak, readonly) UITextField *object;
 @property (weak, readonly) UIETextFieldShouldBeginEditing *shouldBeginEditing;

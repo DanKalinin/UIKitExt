@@ -61,7 +61,7 @@
 
 @interface UIEBarButtonItemOperation : UIEBarItemOperation <UIEBarButtonItemDelegate>
 
-@property (readonly) HLPArray<UIEBarButtonItemDelegate> *delegates;
+@property (readonly) NSEOrderedSet<UIEBarButtonItemDelegate> *delegates;
 
 @property (weak, readonly) UIBarButtonItem *object;
 @property (weak, readonly) UIEvent *event;
