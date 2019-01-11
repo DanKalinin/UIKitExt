@@ -6,6 +6,9 @@
 //
 
 #import "UIEMain.h"
+#import "UIENavigationController.h"
+
+@class UIEStoryboardSegue;
 
 
 
