@@ -60,7 +60,7 @@
 
 @interface UIEBarButtonItemOperation : UIEBarItemOperation <UIEBarButtonItemDelegate>
 
-@property (readonly) NSEOrderedSet<UIEBarButtonItemDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIEBarButtonItemDelegate> *delegates;
 
 @property (weak, readonly) UIBarButtonItem *object;
 @property (weak, readonly) UIEvent *event;

@@ -62,7 +62,7 @@
 
 @interface UIEAlertActionOperation : NSEObjectOperation
 
-@property (readonly) NSEOrderedSet<UIEAlertActionDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIEAlertActionDelegate> *delegates;
 
 @property (weak, readonly) UIAlertAction *object;
 

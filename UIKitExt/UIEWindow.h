@@ -56,7 +56,7 @@
 
 @interface UIEKeyboard : NSEOperation <UIEKeyboardDelegate>
 
-@property (readonly) NSEOrderedSet<UIEKeyboardDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIEKeyboardDelegate> *delegates;
 
 @property (weak, readonly) UIEKeyboardUserInfo *userInfo;
 

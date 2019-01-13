@@ -86,7 +86,7 @@
 
 @interface UIEControlOperation : UIEViewOperation <UIEControlDelegate>
 
-@property (readonly) NSEOrderedSet<UIEControlDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIEControlDelegate> *delegates;
 
 @property (weak, readonly) UIControl *object;
 @property (weak, readonly) UIEvent *event;

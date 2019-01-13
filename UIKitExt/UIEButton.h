@@ -60,7 +60,7 @@
 
 @interface UIEButtonOperation : UIEControlOperation <UIEButtonDelegate>
 
-@property (readonly) NSEOrderedSet<UIEButtonDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIEButtonDelegate> *delegates;
 
 @property (weak, readonly) UIButton *object;
 

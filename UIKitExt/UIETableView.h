@@ -139,7 +139,7 @@
 
 @interface UIETableViewOperation : UIEScrollViewOperation <UIETableViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (readonly) NSEOrderedSet<UIETableViewDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIETableViewDelegate> *delegates;
 @property (readonly) BOOL empty;
 
 @property (weak, readonly) UITableView *object;

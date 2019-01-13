@@ -157,7 +157,7 @@
 
 @interface UIETextFieldOperation : UIEControlOperation <UIETextFieldDelegate, UITextFieldDelegate>
 
-@property (readonly) NSEOrderedSet<UIETextFieldDelegate> *delegates;
+@property (readonly) NSMutableOrderedSet<UIETextFieldDelegate> *delegates;
 
 @property (weak, readonly) UITextField *object;
 @property (weak, readonly) UIETextFieldShouldBeginEditing *shouldBeginEditing;
