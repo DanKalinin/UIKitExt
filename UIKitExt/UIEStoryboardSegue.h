@@ -5,7 +5,7 @@
 //  Created by Dan Kalinin on 1/6/19.
 //
 
-#import "UIEMain.h"
+#import "UIEObject.h"
 #import "UIENavigationController.h"
 
 @class UIEStoryboardSegue;

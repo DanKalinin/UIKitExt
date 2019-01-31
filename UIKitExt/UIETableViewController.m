@@ -18,9 +18,9 @@
 
 @implementation UITableViewController (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIETableViewControllerOperation.class;
 }
 
@@ -46,27 +46,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.nseOperation viewDidLoad];
+    [self.uieOperation viewDidLoad];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
     
-    [self.nseOperation prepareForSegue:segue sender:sender];
+    [self.uieOperation prepareForSegue:segue sender:sender];
 }
 
 #pragma mark - UIETableViewDelegate
 
 - (void)uieTableViewNumberOfSections:(UITableView *)tableView {
-    tableView.nseOperation.numberOfSections.sections = [self numberOfSectionsInTableView:tableView];
+    tableView.uieOperation.numberOfSections.sections = [self numberOfSectionsInTableView:tableView];
 }
 
 - (void)uieTableViewNumberOfRowsInSection:(UITableView *)tableView {
-    tableView.nseOperation.numberOfRowsInSection.rows = [self tableView:tableView numberOfRowsInSection:tableView.nseOperation.numberOfRowsInSection.section];
+    tableView.uieOperation.numberOfRowsInSection.rows = [self tableView:tableView numberOfRowsInSection:tableView.uieOperation.numberOfRowsInSection.section];
 }
 
 - (void)uieTableViewCellForRowAtIndexPath:(UITableView *)tableView {
-    tableView.nseOperation.cellForRowAtIndexPath.cell = [self tableView:tableView cellForRowAtIndexPath:tableView.nseOperation.cellForRowAtIndexPath.indexPath];
+    tableView.uieOperation.cellForRowAtIndexPath.cell = [self tableView:tableView cellForRowAtIndexPath:tableView.uieOperation.cellForRowAtIndexPath.indexPath];
 }
 
 - (void)uieTableViewDidSelectRowAtIndexPath:(UITableView *)tableView {

@@ -18,7 +18,7 @@
 
 @implementation UIControl (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 @dynamic uieDefaultBackgroundColor;
 @dynamic uieHighlightedBackgroundColor;
 @dynamic uieSelectedBackgroundColor;
@@ -28,7 +28,7 @@
 @dynamic uieSelectedLayerBorderColor;
 @dynamic uieDisabledLayerBorderColor;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIEControlOperation.class;
 }
 
@@ -63,19 +63,19 @@
 - (void)setEnabled:(BOOL)enabled {
     super.enabled = enabled;
     
-    self.nseOperation.enabled = enabled;
+    self.uieOperation.enabled = enabled;
 }
 
 - (void)setSelected:(BOOL)selected {
     super.selected = selected;
     
-    self.nseOperation.selected = selected;
+    self.uieOperation.selected = selected;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
     super.highlighted = highlighted;
     
-    self.nseOperation.highlighted = highlighted;
+    self.uieOperation.highlighted = highlighted;
 }
 
 @end

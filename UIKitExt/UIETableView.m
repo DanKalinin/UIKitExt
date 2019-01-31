@@ -18,10 +18,10 @@
 
 @implementation UITableView (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 @dynamic uieEmptyBackgroundView;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIETableViewOperation.class;
 }
 

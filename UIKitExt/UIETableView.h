@@ -29,7 +29,7 @@
 
 @property IBOutlet UIView *uieEmptyBackgroundView;
 
-@property (readonly) UIETableViewOperation *nseOperation;
+@property (readonly) UIETableViewOperation *uieOperation;
 
 @end
 

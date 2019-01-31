@@ -23,7 +23,7 @@
 
 @interface UIAlertAction (UIE)
 
-@property (readonly) UIEAlertActionOperation *nseOperation;
+@property (readonly) UIEAlertActionOperation *uieOperation;
 
 + (instancetype)uieActionWithTitle:(NSString *)title style:(UIAlertActionStyle)style delegate:(id<UIEAlertActionDelegate>)delegate;
 

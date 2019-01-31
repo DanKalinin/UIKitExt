@@ -5,7 +5,7 @@
 //  Created by Dan Kalinin on 12/30/18.
 //
 
-#import "UIEMain.h"
+#import "UIEObject.h"
 
 @class UIEResponder;
 @class UIEResponderOperation;
@@ -23,7 +23,7 @@
 
 @interface UIResponder (UIE)
 
-@property (readonly) UIEResponderOperation *nseOperation;
+@property (readonly) UIEResponderOperation *uieOperation;
 
 @end
 

@@ -23,7 +23,7 @@
 
 @interface UIView (UIE)
 
-@property (readonly) UIEViewOperation *nseOperation;
+@property (readonly) UIEViewOperation *uieOperation;
 
 @property IBInspectable UIColor *uieLayerBorderColor;
 @property IBInspectable NSString *uieStringTag;

@@ -23,7 +23,7 @@
 
 @interface UIApplication (UIE)
 
-@property (readonly) UIEApplicationOperation *nseOperation;
+@property (readonly) UIEApplicationOperation *uieOperation;
 
 @end
 

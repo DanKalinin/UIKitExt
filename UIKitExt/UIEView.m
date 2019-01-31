@@ -18,14 +18,14 @@
 
 @implementation UIView (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 @dynamic uieStringTag;
 @dynamic uieButton1;
 @dynamic uieButton2;
 @dynamic uieTextField1;
 @dynamic uieActivityIndicatorView1;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIEViewOperation.class;
 }
 

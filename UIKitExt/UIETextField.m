@@ -18,11 +18,11 @@
 
 @implementation UITextField (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 @dynamic uiePattern;
 @dynamic uieClearOnBegin;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIETextFieldOperation.class;
 }
 

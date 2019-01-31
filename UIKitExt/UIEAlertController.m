@@ -18,17 +18,17 @@
 
 @implementation UIAlertAction (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 
 + (instancetype)uieActionWithTitle:(NSString *)title style:(UIAlertActionStyle)style delegate:(id<UIEAlertActionDelegate>)delegate {
     UIAlertAction *action = [self actionWithTitle:title style:style handler:^(UIAlertAction *action) {
-        [action.nseOperation.delegates uieAlertActionEvent:action];
+        [action.uieOperation.delegates uieAlertActionEvent:action];
     }];
-    [action.nseOperation.delegates addObject:delegate];
+    [action.uieOperation.delegates addObject:delegate];
     return action;
 }
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIEAlertActionOperation.class;
 }
 

@@ -25,9 +25,9 @@
 @implementation UIEPasscodeViewController
 
 @dynamic view;
-@dynamic nseOperation;
+@dynamic uieOperation;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIEPasscodeViewControllerOperation.class;
 }
 

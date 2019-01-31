@@ -18,9 +18,9 @@
 
 @implementation UIViewController (UIE)
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIEViewControllerOperation.class;
 }
 
@@ -46,13 +46,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.nseOperation viewDidLoad];
+    [self.uieOperation viewDidLoad];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
     
-    [self.nseOperation prepareForSegue:segue sender:sender];
+    [self.uieOperation prepareForSegue:segue sender:sender];
 }
 
 @end
@@ -120,7 +120,7 @@
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
-    [self.object.view.nseOperation.delegates addObject:self.object];
+    [self.object.view.uieOperation.delegates addObject:self.object];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

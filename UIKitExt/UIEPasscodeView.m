@@ -24,9 +24,9 @@
 
 @implementation UIEPasscodeView
 
-@dynamic nseOperation;
+@dynamic uieOperation;
 
-- (Class)nseOperationClass {
+- (Class)uieOperationClass {
     return UIEPasscodeViewOperation.class;
 }
 
@@ -62,10 +62,10 @@
     
     self.generator = UINotificationFeedbackGenerator.new;
     
-    [object.buttonDelete.nseOperation.delegates addObject:self];
+    [object.buttonDelete.uieOperation.delegates addObject:self];
     
     for (UIButton *button in object.buttons) {
-        [button.nseOperation.delegates addObject:self];
+        [button.uieOperation.delegates addObject:self];
     }
     
     return self;

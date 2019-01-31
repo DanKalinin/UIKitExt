@@ -5,7 +5,7 @@
 //  Created by Dan Kalinin on 12/31/18.
 //
 
-#import "UIEMain.h"
+#import "UIEObject.h"
 
 @class UIEBarItem;
 @class UIEBarItemOperation;
@@ -23,7 +23,7 @@
 
 @interface UIBarItem (UIE)
 
-@property (readonly) UIEBarItemOperation *nseOperation;
+@property (readonly) UIEBarItemOperation *uieOperation;
 
 @end
 

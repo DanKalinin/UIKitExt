@@ -30,7 +30,7 @@
 @property IBOutletCollection(UILabel) NSArray<UILabel *> *labels;
 @property IBOutletCollection(UIButton) NSArray<UIButton *> *buttons;
 
-@property (readonly) UIEPasscodeViewOperation *nseOperation;
+@property (readonly) UIEPasscodeViewOperation *uieOperation;
 
 @end
 

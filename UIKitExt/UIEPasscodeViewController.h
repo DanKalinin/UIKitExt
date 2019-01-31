@@ -26,7 +26,7 @@
 
 @property (nonatomic) UIEPasscodeView *view;
 
-@property (readonly) UIEPasscodeViewControllerOperation *nseOperation;
+@property (readonly) UIEPasscodeViewControllerOperation *uieOperation;
 
 @end
 
