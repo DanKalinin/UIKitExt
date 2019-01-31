@@ -18,7 +18,7 @@
 
 @implementation UILabel (UIE)
 
-@dynamic uieOperation;
+@dynamic nseOperation;
 @dynamic uieDefaultBackgroundColor;
 @dynamic uieHighlightedBackgroundColor;
 @dynamic uieDisabledBackgroundColor;
@@ -26,7 +26,7 @@
 @dynamic uieHighlightedLayerBorderColor;
 @dynamic uieDisabledLayerBorderColor;
 
-- (Class)uieOperationClass {
+- (Class)nseOperationClass {
     return UIELabelOperation.class;
 }
 
@@ -59,13 +59,13 @@
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
     
-    [self.uieOperation setEnabled:enabled];
+    [self.nseOperation setEnabled:enabled];
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
     
-    [self.uieOperation setHighlighted:highlighted];
+    [self.nseOperation setHighlighted:highlighted];
 }
 
 @end

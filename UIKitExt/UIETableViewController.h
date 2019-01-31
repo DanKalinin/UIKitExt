@@ -24,7 +24,7 @@
 
 @interface UITableViewController (UIE) <UIETableViewDelegate>
 
-@property (readonly) UIETableViewControllerOperation *uieOperation;
+@property (readonly) UIETableViewControllerOperation *nseOperation;
 
 @end
 

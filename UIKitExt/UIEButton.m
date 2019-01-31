@@ -18,9 +18,9 @@
 
 @implementation UIButton (UIE)
 
-@dynamic uieOperation;
+@dynamic nseOperation;
 
-- (Class)uieOperationClass {
+- (Class)nseOperationClass {
     return UIEButtonOperation.class;
 }
 
@@ -57,19 +57,19 @@
 - (void)setEnabled:(BOOL)enabled {
     super.enabled = enabled;
     
-    self.uieOperation.enabled = enabled;
+    self.nseOperation.enabled = enabled;
 }
 
 - (void)setSelected:(BOOL)selected {
     super.selected = selected;
     
-    self.uieOperation.selected = selected;
+    self.nseOperation.selected = selected;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
     super.highlighted = highlighted;
     
-    self.uieOperation.highlighted = highlighted;
+    self.nseOperation.highlighted = highlighted;
 }
 
 @end

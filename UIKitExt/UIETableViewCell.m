@@ -18,9 +18,9 @@
 
 @implementation UITableViewCell (UIE)
 
-@dynamic uieOperation;
+@dynamic nseOperation;
 
-- (Class)uieOperationClass {
+- (Class)nseOperationClass {
     return UIETableViewCellOperation.class;
 }
 
@@ -51,19 +51,19 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
-    [self.uieOperation setSelected:selected animated:animated];
+    [self.nseOperation setSelected:selected animated:animated];
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
     [super setHighlighted:highlighted animated:animated];
     
-    [self.uieOperation setHighlighted:highlighted animated:animated];
+    [self.nseOperation setHighlighted:highlighted animated:animated];
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     
-    [self.uieOperation setEditing:editing animated:animated];
+    [self.nseOperation setEditing:editing animated:animated];
 }
 
 @end

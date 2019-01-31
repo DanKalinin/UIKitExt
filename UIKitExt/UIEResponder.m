@@ -18,9 +18,9 @@
 
 @implementation UIResponder (UIE)
 
-@dynamic uieOperation;
+@dynamic nseOperation;
 
-- (Class)uieOperationClass {
+- (Class)nseOperationClass {
     return UIEResponderOperation.class;
 }
 

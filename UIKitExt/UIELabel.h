@@ -21,7 +21,7 @@
 
 @interface UILabel (UIE)
 
-@property (readonly) UIELabelOperation *uieOperation;
+@property (readonly) UIELabelOperation *nseOperation;
 
 @property IBInspectable UIColor *uieDefaultBackgroundColor;
 @property IBInspectable UIColor *uieHighlightedBackgroundColor;

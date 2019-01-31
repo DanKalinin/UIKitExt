@@ -28,7 +28,7 @@
 
 @interface UITextField (UIE)
 
-@property (readonly) UIETextFieldOperation *uieOperation;
+@property (readonly) UIETextFieldOperation *nseOperation;
 
 @property IBInspectable NSString *uiePattern;
 @property IBInspectable BOOL uieClearOnBegin;

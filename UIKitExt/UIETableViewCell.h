@@ -23,7 +23,7 @@
 
 @interface UITableViewCell (UIE)
 
-@property (readonly) UIETableViewCellOperation *uieOperation;
+@property (readonly) UIETableViewCellOperation *nseOperation;
 
 @end
 

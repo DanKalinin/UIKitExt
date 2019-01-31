@@ -18,9 +18,9 @@
 
 @implementation UIApplication (UIE)
 
-@dynamic uieOperation;
+@dynamic nseOperation;
 
-- (Class)uieOperationClass {
+- (Class)nseOperationClass {
     return UIEApplicationOperation.class;
 }
 
@@ -46,7 +46,7 @@
 - (instancetype)init {
     self = super.init;
     
-    (void)self.uieOperation;
+    (void)self.nseOperation;
     
     return self;
 }

@@ -23,7 +23,7 @@
 
 @interface UIControl (UIE)
 
-@property (readonly) UIEControlOperation *uieOperation;
+@property (readonly) UIEControlOperation *nseOperation;
 
 @property IBInspectable UIColor *uieDefaultBackgroundColor;
 @property IBInspectable UIColor *uieHighlightedBackgroundColor;

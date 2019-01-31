@@ -23,7 +23,7 @@
 
 @interface UIBarButtonItem (UIE)
 
-@property (readonly) UIEBarButtonItemOperation *uieOperation;
+@property (readonly) UIEBarButtonItemOperation *nseOperation;
 
 @end
 

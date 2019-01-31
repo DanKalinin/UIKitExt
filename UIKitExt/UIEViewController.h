@@ -25,7 +25,7 @@
 
 @interface UIViewController (UIE) <UIEViewDelegate>
 
-@property (readonly) UIEViewControllerOperation *uieOperation;
+@property (readonly) UIEViewControllerOperation *nseOperation;
 
 @end
 

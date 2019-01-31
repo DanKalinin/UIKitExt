@@ -23,7 +23,7 @@
 
 @interface UIButton (UIE)
 
-@property (readonly) UIEButtonOperation *uieOperation;
+@property (readonly) UIEButtonOperation *nseOperation;
 
 @end
 

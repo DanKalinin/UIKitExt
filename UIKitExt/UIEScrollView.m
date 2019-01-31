@@ -18,9 +18,9 @@
 
 @implementation UIScrollView (UIE)
 
-@dynamic uieOperation;
+@dynamic nseOperation;
 
-- (Class)uieOperationClass {
+- (Class)nseOperationClass {
     return UIEScrollViewOperation.class;
 }
 
