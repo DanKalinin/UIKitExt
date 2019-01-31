@@ -7,6 +7,8 @@
 
 #import "UIEMain.h"
 
+@class UIEObject;
+
 
 
 
