@@ -20,6 +20,10 @@
 
 @dynamic nseOperation;
 
++ (instancetype)nseShared {
+    return self.sharedApplication;
+}
+
 - (Class)nseOperationClass {
     return UIEApplicationOperation.class;
 }
