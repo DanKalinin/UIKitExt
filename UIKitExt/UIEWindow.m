@@ -77,12 +77,12 @@
 - (instancetype)init {
     self = super.init;
     
-    [self.center addObserver:self selector:@selector(willShowNotification:) name:UIKeyboardWillShowNotification object:nil];
-    [self.center addObserver:self selector:@selector(didShowNotification:) name:UIKeyboardDidShowNotification object:nil];
-    [self.center addObserver:self selector:@selector(willHideNotification:) name:UIKeyboardWillHideNotification object:nil];
-    [self.center addObserver:self selector:@selector(didHideNotification:) name:UIKeyboardDidHideNotification object:nil];
-    [self.center addObserver:self selector:@selector(willChangeFrameNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    [self.center addObserver:self selector:@selector(didChangeFrameNotification:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(willShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didShowNotification:) name:UIKeyboardDidShowNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(willHideNotification:) name:UIKeyboardWillHideNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didHideNotification:) name:UIKeyboardDidHideNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(willChangeFrameNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didChangeFrameNotification:) name:UIKeyboardDidChangeFrameNotification object:nil];
     
     return self;
 }
