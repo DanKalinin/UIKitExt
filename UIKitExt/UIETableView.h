@@ -6,6 +6,7 @@
 //
 
 #import "UIEScrollView.h"
+#import "UIETableViewCell.h"
 
 @class UIETableView;
 @class UIETableViewNumberOfSections;

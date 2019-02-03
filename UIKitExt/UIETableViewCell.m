@@ -96,6 +96,8 @@
     
     self.object.uieButton1.enabled = enabled;
     self.object.uieButton2.enabled = enabled;
+    
+    self.object.uieTextField1.enabled = enabled;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
