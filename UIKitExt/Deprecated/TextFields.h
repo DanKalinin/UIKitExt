@@ -22,6 +22,7 @@
 
 @property (strong, nonatomic) IBOutletCollection(TextField) NSArray *textFields; // Maintainable text fields
 @property (strong, nonatomic) IBOutletCollection(Button) NSArray *buttons; // Buttons to enable/disable based on input validity
+@property (strong, nonatomic) IBOutletCollection(UIBarButtonItem) NSArray *items;
 
 @property IBInspectable NSString *separator; // . - default separator
 

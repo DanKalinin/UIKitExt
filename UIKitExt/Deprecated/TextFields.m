@@ -58,6 +58,7 @@
 
 - (void)editingChanged:(TextField *)sender {
     [self.buttons setValue:@(self.valid) forKey:@"enabled"];
+    [self.items setValue:@(self.valid) forKey:@"enabled"];
     [self sendActionsForControlEvents:UIControlEventEditingChanged];
 }
 
