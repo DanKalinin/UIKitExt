@@ -113,7 +113,7 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 
 @interface Button : UIButton // Customized button
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *subbuttons; // Subbuttons changing their state together with receiver
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray<UIButton *> *subbuttons; // Subbuttons changing their state together with receiver
 
 @property (weak, nonatomic) IBOutlet Button *button1; // Convenience outlet connections
 @property (weak, nonatomic) IBOutlet Button *button2;
