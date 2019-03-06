@@ -283,6 +283,9 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 @property (weak, nonatomic) IBOutlet Button *button1;
 @property (weak, nonatomic) IBOutlet Button *button2;
 @property (weak, nonatomic) IBOutlet Button *button3;
+@property (weak, nonatomic) IBOutlet Button *button4;
+@property (weak, nonatomic) IBOutlet Button *button5;
+@property (weak, nonatomic) IBOutlet Button *button6;
 
 @property (strong, nonatomic) IBOutlet Button *sButton1;
 
