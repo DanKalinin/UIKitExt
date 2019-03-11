@@ -159,6 +159,7 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 @property id userInfo;
 
 @property (readonly) UITableViewCellStateMask state;
+@property (readonly) BOOL wasSelected;
 
 @property (readonly) BOOL enabled;
 - (void)setEnabled:(BOOL)enabled animated:(BOOL)animated;
