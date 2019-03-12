@@ -128,8 +128,10 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 @property (weak, nonatomic) IBOutlet UISlider *slider1;
 
 @property (weak, nonatomic) IBOutlet PickerControl *pickerControl1;
+@property (weak, nonatomic) IBOutlet PickerControl *pickerControl2;
 
 @property (weak, nonatomic) IBOutlet NumberPickerControl *numberPickerControl1;
+@property (weak, nonatomic) IBOutlet NumberPickerControl *numberPickerControl2;
 
 @property (weak, nonatomic) IBOutlet DoubleNumberPickerControl *doubleNumberPickerControl1;
 
