@@ -255,6 +255,16 @@
     
     if (self.rowsCollapsed) {
         [self.collapsedRows addObjectsFromArray:self.indexPaths];
+    } else {
+        SEL selector = @selector(tableView:isCollapsedIndexPath:);
+        if ([self.originalDataSource respondsToSelector:selector]) {
+            for (NSIndexPath *indexPath in self.indexPaths) {
+                BOOL collapsed = [self.originalDataSource tableView:self isCollapsedIndexPath:indexPath];
+                if (collapsed) {
+                    [self.collapsedRows addObject:indexPath];
+                }
+            }
+        }
     }
 }
 

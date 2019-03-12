@@ -38,6 +38,7 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 // Collapsing
 
 - (BOOL)tableView:(TableView *)tableView isCollapsedSection:(NSInteger)section;
+- (BOOL)tableView:(TableView *)tableView isCollapsedIndexPath:(NSIndexPath *)indexPath;
 
 // Grouping
 
@@ -239,6 +240,9 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 @property IBInspectable BOOL canMoveRows;
 @property IBInspectable BOOL canMoveSingleRow;
 @property IBInspectable TableViewRowReorderingPolicy rowReorderingPolicy;
+
+@property (readonly) NSMutableIndexSet *collapsedSections;
+@property (readonly) NSMutableSet *collapsedRows;
 
 @property (readonly) UIPanGestureRecognizer *pgrGroup; // Enable to support grouping
 
