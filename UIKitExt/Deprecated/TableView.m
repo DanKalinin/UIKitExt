@@ -21,7 +21,6 @@
 @interface TableViewCell ()
 
 @property UITableViewCellStateMask state;
-@property BOOL wasSelected;
 @property BOOL enabled;
 
 @end
@@ -40,8 +39,6 @@
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    self.wasSelected = self.selected;
-    
     [super setSelected:selected animated:animated];
     
     if (self.selectedAccessoryType == self.defaultAccessoryType) return;
