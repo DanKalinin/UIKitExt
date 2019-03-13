@@ -38,6 +38,12 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self.pickerView selectRow:0 inComponent:0 animated:NO];
+}
+
 - (void)setValue:(NSUInteger)value animated:(BOOL)animated {
     NSInteger row = [self rowFromValue:value];
     [self.pickerView selectRow:row inComponent:0 animated:animated];
