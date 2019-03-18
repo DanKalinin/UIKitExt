@@ -9,6 +9,8 @@
 #import "TableView.h"
 #import <FoundationExt/FoundationExt.h>
 
+NSString *const TableViewCellReuseIdentifier = @"Cell";
+
 
 
 

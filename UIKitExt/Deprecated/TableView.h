@@ -15,6 +15,8 @@
 
 @class TableView;
 
+extern NSString *const TableViewCellReuseIdentifier;
+
 typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
     TableViewRowReorderingPolicyNone,
     TableViewRowReorderingPolicyInSection
