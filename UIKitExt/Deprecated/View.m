@@ -329,6 +329,7 @@ const UIModalPresentationStyle UIModalPresentationPush = -10;
         self.keyboardWillChangeFrameNotification = YES;
         
         UITapGestureRecognizer *tgr = [UITapGestureRecognizer.alloc initWithTarget:self action:@selector(onTap:)];
+        tgr.delegate = self;
         tgr.cancelsTouchesInView = NO;
         [self addGestureRecognizer:tgr];
     }
@@ -352,6 +353,19 @@ const UIModalPresentationStyle UIModalPresentationPush = -10;
 
 - (void)onTap:(UITapGestureRecognizer *)tgr {
     [self endEditing:YES];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    BOOL should = YES;
+    
+    for (UIView *view = touch.view; view; view = view.superview) {
+        if (view.isFirstResponder) {
+            should = NO;
+            break;
+        }
+    }
+    
+    return should;
 }
 
 @end
