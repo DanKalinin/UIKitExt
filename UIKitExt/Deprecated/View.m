@@ -90,6 +90,25 @@ const UIModalPresentationStyle UIModalPresentationPush = -10;
 
 
 
+@interface TextView ()
+
+@end
+
+
+
+@implementation TextView
+
+@end
+
+
+
+
+
+
+
+
+
+
 @interface TextFieldDelegate : NSObject <UITextFieldDelegate>
 
 @end
@@ -137,25 +156,6 @@ const UIModalPresentationStyle UIModalPresentationPush = -10;
 - (void)textFieldDidEndEditing:(TextField *)textField {
     
 }
-
-@end
-
-
-
-
-
-
-
-
-
-
-@interface TextView ()
-
-@end
-
-
-
-@implementation TextView
 
 @end
 
