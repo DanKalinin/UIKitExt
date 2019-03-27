@@ -38,9 +38,15 @@
         frame.size.height = 200.0;
     }
     
-//    [UIView animateWithDuration:0.5 animations:^{
+    [self.tableView beginUpdates];
+    [UIView animateWithDuration:0.3 animations:^{
         self.frame = frame;
-//    }];
+    }];
+    [self.tableView endUpdates];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
 }
 
 @end

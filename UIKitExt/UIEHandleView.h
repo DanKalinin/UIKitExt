@@ -23,6 +23,8 @@
 
 @property IBInspectable UIFloatRange range;
 
+@property (weak) IBOutlet UITableView *tableView;
+
 @property (readonly) UIEHandleViewOperation *nseOperation;
 
 @end
