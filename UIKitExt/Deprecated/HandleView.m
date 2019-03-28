@@ -20,13 +20,15 @@
 
 @implementation HandleView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+#pragma mark - Accessors
+
+- (void)setHandle:(UIView *)handle {
+    _handle = handle;
     
-    self.frame = self.handle.frame;
+    self.frame = handle.frame;
     
     self.pgr = [UIPanGestureRecognizer.alloc initWithTarget:self action:@selector(onPan:)];
-    [self.handle addGestureRecognizer:self.pgr];
+    [handle addGestureRecognizer:self.pgr];
 }
 
 #pragma mark - Actions

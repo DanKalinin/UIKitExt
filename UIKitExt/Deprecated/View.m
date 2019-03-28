@@ -9,6 +9,7 @@
 #import "TextFields.h"
 #import "TimerControl.h"
 #import "CircleView.h"
+#import "HandleView.h"
 
 const UIModalPresentationStyle UIModalPresentationPush = -10;
 

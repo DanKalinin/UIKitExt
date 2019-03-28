@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <FoundationExt/FoundationExt.h>
 
-@class TextFields, TimerControl, CircleView;
+@class TextFields, TimerControl, CircleView, HandleView;
 @class View, ImageView, TextField, TextView, Button, KeyboardContainerView, ShapeLayerView, GradientLayerView, GradientLayerView2, EmitterLayerView;
 
 extern const UIModalPresentationStyle UIModalPresentationPush;
@@ -292,6 +292,8 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 @property (weak, nonatomic) IBOutlet TimerControl *timerControl1;
 
 @property (weak, nonatomic) IBOutlet CircleView *circleView1;
+
+@property (weak, nonatomic) IBOutlet HandleView *handleView1;
 
 @property (weak, readonly) UIViewController *overlay;
 

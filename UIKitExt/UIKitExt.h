@@ -47,3 +47,4 @@ FOUNDATION_EXPORT const unsigned char UIKitExtVersionString[];
 #import <UIKitExt/PickerPresentingVC.h>
 #import <UIKitExt/TimerControl.h>
 #import <UIKitExt/CircleView.h>
+#import <UIKitExt/HandleView.h>
