@@ -12,7 +12,6 @@
 @interface HandleView ()
 
 @property UIPanGestureRecognizer *pgr;
-
 @property CGRect startFrame;
 
 @end
@@ -34,68 +33,21 @@
 
 - (void)onPan:(UIPanGestureRecognizer *)pgr {
     if (pgr.state == UIGestureRecognizerStateBegan) {
-        [pgr setTranslation:CGPointZero inView:self.window];
-        self.startFrame = self.frame;
+        [self begin];
     } else if (pgr.state == UIGestureRecognizerStateChanged) {
         [self resize];
     } else if (pgr.state >= UIGestureRecognizerStateEnded) {
         [self resize];
+        [self complete];
     }
-    
-//    - (void)onPan:(UIPanGestureRecognizer *)pgr {
-//        BOOL hide = [pgr isEqual:self.pgrDimming];
-//        BOOL show = !hide;
-//
-//        if (pgr.state == UIGestureRecognizerStateBegan) {
-//            MenuView *menu;
-//            if (hide) {
-//                menu = self.menu;
-//            } else if ([pgr isEqual:self.top.pgr]) {
-//                menu = self.top;
-//            } else if ([pgr isEqual:self.left.pgr]) {
-//                menu = self.left;
-//            } else if ([pgr isEqual:self.bottom.pgr]) {
-//                menu = self.bottom;
-//            } else {
-//                menu = self.right;
-//            }
-//
-//            [self menu:menu show:show animated:YES];
-//            [self.animator pauseAnimation];
-//            self.fraction = self.animator.fractionComplete;
-//            [pgr setTranslation:CGPointZero inView:self.view];
-//        } else if (pgr.state == UIGestureRecognizerStateChanged) {
-//            CGPoint translation = [pgr translationInView:self.view];
-//            CGFloat fraction = self.fraction;
-//            if ([self.menu isEqual:self.top] || [self.menu isEqual:self.bottom]) {
-//                if ([self.menu isEqual:self.top]) {
-//                    if ((show && (translation.y < 0)) || (hide && (translation.y > 0))) return;
-//                } else {
-//                    if ((show && (translation.y > 0)) || (hide && (translation.y < 0))) return;
-//                }
-//                fraction += fabs(translation.y / self.menu.bounds.size.height);
-//            } else {
-//                if ([self.menu isEqual:self.left]) {
-//                    if ((show && (translation.x < 0)) || (hide && (translation.x > 0))) return;
-//                } else {
-//                    if ((show && (translation.x > 0)) || (hide && (translation.x < 0))) return;
-//                }
-//                fraction += fabs(translation.x / self.menu.bounds.size.width);
-//            }
-//
-//            self.animator.fractionComplete = fraction;
-//        } else if (pgr.state >= UIGestureRecognizerStateEnded) {
-//            if (show) {
-//                self.animator.reversed = (self.animator.fractionComplete < self.menu.anchor);
-//            } else {
-//                self.animator.reversed = (self.animator.fractionComplete < (1.0 - self.menu.anchor));
-//            }
-//            [self.animator continueAnimationWithTimingParameters:nil durationFactor:1.0];
-//        }
-//    }
 }
 
 #pragma mark - Helpers
+
+- (void)begin {
+    [self.pgr setTranslation:CGPointZero inView:self.window];
+    self.startFrame = self.frame;
+}
 
 - (void)resize {
     CGPoint translation = [self.pgr translationInView:self.window];
@@ -106,6 +58,26 @@
         self.frame = frame;
         self.tableView.tableHeaderView = self;
     }
+}
+
+- (void)complete {
+    CGRect frame = self.frame;
+    
+    if ((self.frame.size.height - self.handle.frame.size.height) > (0.5 * self.length)) {
+        frame.size.height = self.handle.frame.size.height + self.length;
+    } else {
+        frame.size.height = self.handle.frame.size.height;
+    }
+    
+    [self.tableView beginUpdates];
+    
+    [self layoutIfNeeded];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.frame = frame;
+        [self layoutIfNeeded];
+    }];
+    
+    [self.tableView endUpdates];
 }
 
 @end
