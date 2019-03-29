@@ -289,6 +289,10 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 
 @property (weak, nonatomic) IBOutlet TextFields *textFields1;
 
+@property (weak, nonatomic) IBOutlet UIStackView *stackView1;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView2;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView3;
+
 @property (weak, nonatomic) IBOutlet TimerControl *timerControl1;
 
 @property (weak, nonatomic) IBOutlet CircleView *circleView1;
