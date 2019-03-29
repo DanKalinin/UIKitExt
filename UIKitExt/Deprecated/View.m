@@ -10,6 +10,7 @@
 #import "TimerControl.h"
 #import "CircleView.h"
 #import "HandleView.h"
+#import "ScrollView.h"
 
 const UIModalPresentationStyle UIModalPresentationPush = -10;
 

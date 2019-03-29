@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <FoundationExt/FoundationExt.h>
 
-@class TextFields, TimerControl, CircleView, HandleView;
+@class TextFields, TimerControl, CircleView, HandleView, ScrollView;
 @class View, ImageView, TextField, TextView, Button, KeyboardContainerView, ShapeLayerView, GradientLayerView, GradientLayerView2, EmitterLayerView;
 
 extern const UIModalPresentationStyle UIModalPresentationPush;
@@ -253,7 +253,7 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 @property (weak, nonatomic) IBOutlet UIView *view5;
 @property (weak, nonatomic) IBOutlet UIView *view6;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView1;
+@property (weak, nonatomic) IBOutlet ScrollView *scrollView1;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView2;
@@ -292,6 +292,11 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView1;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView2;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView3;
+
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl1;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraint1;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraint2;
 
 @property (weak, nonatomic) IBOutlet TimerControl *timerControl1;
 
