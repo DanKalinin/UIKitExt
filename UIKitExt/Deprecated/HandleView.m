@@ -20,6 +20,26 @@
 
 @implementation HandleView
 
+- (void)setLength:(CGFloat)length animated:(BOOL)animated {
+    self.length = length;
+    
+    if (self.frame.size.height > self.handle.frame.size.height) {
+        CGRect frame = self.frame;
+        frame.size.height = self.handle.frame.size.height + length;
+        
+        [self.tableView beginUpdates];
+        
+        [self layoutIfNeeded];
+        NSTimeInterval duration = 0.3 * animated;
+        [UIView animateWithDuration:duration animations:^{
+            self.frame = frame;
+            [self layoutIfNeeded];
+        }];
+        
+        [self.tableView endUpdates];
+    }
+}
+
 #pragma mark - Accessors
 
 - (void)setHandle:(UIView *)handle {
