@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIView *handle;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (readonly) BOOL expanded;
+
 - (void)setLength:(CGFloat)length animated:(BOOL)animated;
 
 @end

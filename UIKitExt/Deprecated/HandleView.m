@@ -51,6 +51,11 @@
     [handle addGestureRecognizer:self.pgr];
 }
 
+- (BOOL)expanded {
+    BOOL expanded = (self.frame.size.height > self.handle.frame.size.height);
+    return expanded;
+}
+
 #pragma mark - Actions
 
 - (void)onPan:(UIPanGestureRecognizer *)pgr {
@@ -83,12 +88,21 @@
 }
 
 - (void)complete {
+    CGPoint translation = [self.pgr translationInView:self.window];
     CGRect frame = self.frame;
     
-    if ((self.frame.size.height - self.handle.frame.size.height) > (0.5 * self.length)) {
-        frame.size.height = self.handle.frame.size.height + self.length;
+    if (translation.y > 0.0) {
+        if (translation.y > 0.1 * self.length) {
+            frame.size.height = self.handle.frame.size.height + self.length;
+        } else {
+            frame.size.height = self.handle.frame.size.height;
+        }
     } else {
-        frame.size.height = self.handle.frame.size.height;
+        if (translation.y < -0.1 * self.length) {
+            frame.size.height = self.handle.frame.size.height;
+        } else {
+            frame.size.height = self.handle.frame.size.height + self.length;
+        }
     }
     
     [self.tableView beginUpdates];
