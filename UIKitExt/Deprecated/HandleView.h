@@ -5,11 +5,11 @@
 //  Created by Dan Kalinin on 3/27/19.
 //
 
-#import "View.h"
+#import "Control.h"
 
 
 
-@interface HandleView : View
+@interface HandleView : Control
 
 @property IBInspectable CGFloat length;
 
