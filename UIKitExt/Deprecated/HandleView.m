@@ -23,7 +23,7 @@
 - (void)setLength:(CGFloat)length animated:(BOOL)animated {
     self.length = length;
     
-    if (self.frame.size.height > self.handle.frame.size.height) {
+    if (self.expanded) {
         CGRect frame = self.frame;
         frame.size.height = self.handle.frame.size.height + length;
         
@@ -34,6 +34,8 @@
         [UIView animateWithDuration:duration animations:^{
             self.frame = frame;
             [self layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            [self sendActionsForControlEvents:UIControlEventValueChanged];
         }];
         
         [self.tableView endUpdates];
@@ -111,6 +113,8 @@
     [UIView animateWithDuration:0.3 animations:^{
         self.frame = frame;
         [self layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
     }];
     
     [self.tableView endUpdates];

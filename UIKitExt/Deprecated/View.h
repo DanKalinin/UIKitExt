@@ -262,6 +262,8 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UILabel *label3;
+@property (weak, nonatomic) IBOutlet UILabel *label4;
+@property (weak, nonatomic) IBOutlet UILabel *label5;
 
 @property (strong, nonatomic) IBOutlet UILabel *sLabel1;
 @property (strong, nonatomic) IBOutlet UILabel *sLabel2;
@@ -292,6 +294,7 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView1;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView2;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView3;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView4;
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl1;
 
