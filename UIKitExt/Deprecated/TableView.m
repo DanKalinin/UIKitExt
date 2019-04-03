@@ -163,6 +163,9 @@ NSString *const TableViewCellReuseIdentifier = @"Cell";
         
         self.canMoveSingleRow = YES;
         
+        self.cellEditingStyle = UITableViewCellEditingStyleDelete;
+        self.shouldIndentWhileEditing = YES;
+        
         self.pgrGroup = [UIPanGestureRecognizer.alloc initWithTarget:self action:@selector(onPan:)];
         self.pgrGroup.enabled = NO;
         self.pgrGroup.cancelsTouchesInView = NO;
@@ -449,6 +452,28 @@ NSString *const TableViewCellReuseIdentifier = @"Cell";
         }
     }
     return ip;
+}
+
+// Editing
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCellEditingStyle style = self.cellEditingStyle;
+    
+    if ([self.originalDelegate respondsToSelector:_cmd]) {
+        style = [self.originalDelegate tableView:tableView editingStyleForRowAtIndexPath:indexPath];
+    }
+    
+    return style;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    BOOL should = self.shouldIndentWhileEditing;
+    
+    if ([self.originalDelegate respondsToSelector:_cmd]) {
+        should = [self.originalDelegate tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath];
+    }
+    
+    return should;
 }
 
 #pragma mark - Gesture recognizer

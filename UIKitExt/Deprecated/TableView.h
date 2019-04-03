@@ -243,6 +243,9 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 @property IBInspectable BOOL canMoveSingleRow;
 @property IBInspectable TableViewRowReorderingPolicy rowReorderingPolicy;
 
+@property IBInspectable UITableViewCellEditingStyle cellEditingStyle;
+@property IBInspectable BOOL shouldIndentWhileEditing;
+
 @property (readonly) UIPanGestureRecognizer *pgrGroup; // Enable to support grouping
 
 - (IBAction)onHeaderView:(UIButton *)sender;
