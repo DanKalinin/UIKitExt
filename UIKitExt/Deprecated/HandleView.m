@@ -27,18 +27,10 @@
         CGRect frame = self.frame;
         frame.size.height = self.handle.frame.size.height + length;
         
-        [self.tableView beginUpdates];
+        self.frame = frame;
+        [self.tableView reloadData];
         
-        [self layoutIfNeeded];
-        NSTimeInterval duration = 0.3 * animated;
-        [UIView animateWithDuration:duration animations:^{
-            self.frame = frame;
-            [self layoutIfNeeded];
-        } completion:^(BOOL finished) {
-            [self sendActionsForControlEvents:UIControlEventValueChanged];
-        }];
-        
-        [self.tableView endUpdates];
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
     }
 }
 
