@@ -28,7 +28,7 @@
         frame.size.height = self.handle.frame.size.height + length;
         
         self.frame = frame;
-        [self.tableView reloadData];
+        self.tableView.tableHeaderView = self;
         
         [self sendActionsForControlEvents:UIControlEventValueChanged];
     }
