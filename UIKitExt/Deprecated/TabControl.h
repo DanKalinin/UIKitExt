@@ -6,11 +6,11 @@
 //  Copyright © 2016 Dan Kalinin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Control.h"
 
 
 
-@interface TabControl : UIControl
+@interface TabControl : Control
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView;
@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *widthConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *initialButton;
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+@property (strong, nonatomic) IBOutletCollection(Button) NSMutableArray *buttons;
 
 @property IBInspectable CGFloat disabledAlpha;
 
