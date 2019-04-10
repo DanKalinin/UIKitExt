@@ -36,6 +36,8 @@ extern const UIModalPresentationStyle UIModalPresentationPush;
 
 @property (weak, nonatomic) IBOutlet CircleView *circleView1;
 
+@property IBOutletCollection(Button) NSMutableArray<Button *> *buttons;
+
 @end
 
 

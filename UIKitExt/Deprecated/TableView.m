@@ -630,6 +630,26 @@ NSString *const TableViewCellReuseIdentifier = @"Cell";
 @dynamic view;
 @dynamic tableView;
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSInteger rows;
+    if (self.cells.count > 0) {
+        rows = self.cells.count;
+    } else {
+        rows = [super tableView:tableView numberOfRowsInSection:section];
+    }
+    return rows;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell;
+    if (self.cells.count > 0) {
+        cell = self.cells[indexPath.row];
+    } else {
+        cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
+    return cell;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height;
     if (self.cells.count > 0) {

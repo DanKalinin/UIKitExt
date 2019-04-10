@@ -306,7 +306,7 @@ typedef NS_ENUM(NSUInteger, TableViewRowReorderingPolicy) {
 
 @property (strong, nonatomic) IBOutlet EdgeSliderControl *sliderControl1;
 
-@property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *cells;
+@property (strong, nonatomic) IBOutletCollection(TableViewCell) NSMutableArray<TableViewCell *> *cells;
 
 @property IBInspectable NSString *string1;
 @property IBInspectable NSString *string2;
