@@ -75,7 +75,7 @@ typedef NS_ENUM(NSInteger, PickerActionTag) {
 
 #pragma mark - Actions
 
-- (void)didHandleAction:(id<Action>)action {
+- (void)didHandleAction:(id<Action>)action NS_EXTENSION_UNAVAILABLE("") {
     if (action.tag == PickerActionTagSettings) {
         NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
         [UIApplication.sharedApplication openURL:url options:@{} completionHandler:nil];

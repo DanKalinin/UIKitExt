@@ -61,7 +61,7 @@
 
 #pragma mark - Accessors
 
-- (UIWindow *)window {
+- (UIWindow *)window NS_EXTENSION_UNAVAILABLE("") {
     return UIApplication.sharedApplication.keyWindow;
 }
 

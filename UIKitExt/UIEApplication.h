@@ -25,6 +25,8 @@
 
 @property (readonly) UIEApplicationOperation *nseOperation;
 
++ (instancetype)nseShared NS_EXTENSION_UNAVAILABLE("");
+
 @end
 
 
