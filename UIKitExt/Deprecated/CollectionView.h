@@ -64,6 +64,7 @@ typedef NS_ENUM(NSUInteger, CollectionViewItemReorderingPolicy) {
 @interface CollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet ImageView *imageView1;
+@property (weak, nonatomic) IBOutlet ImageView *imageView2;
 
 @property (weak, nonatomic) IBOutlet UIView *view1;
 @property (weak, nonatomic) IBOutlet UIView *view2;
