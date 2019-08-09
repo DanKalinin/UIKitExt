@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "View.h"
 
 
 
-@interface PageVC : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface PageVC : ViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
