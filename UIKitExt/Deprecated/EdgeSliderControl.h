@@ -17,11 +17,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl1;
+
 @property (weak, nonatomic) IBOutlet PickerControl *pickerControl1;
 @property (weak, nonatomic) IBOutlet PickerControl *pickerControl2;
 
 @property (weak, nonatomic) IBOutlet NumberPickerControl *numberPickerControl1;
 @property (weak, nonatomic) IBOutlet NumberPickerControl *numberPickerControl2;
+@property (weak, nonatomic) IBOutlet NumberPickerControl *numberPickerControl3;
 
 @property (weak, nonatomic) IBOutlet TimePickerControl *timePickerControl1;
 @property (weak, nonatomic) IBOutlet TimePickerControl *timePickerControl2;
