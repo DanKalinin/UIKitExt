@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char UIKitExtVersionString[];
 
 // Deprecated
 
+#import <UIKitExt/Window.h>
 #import <UIKitExt/View.h>
 #import <UIKitExt/ConcentricView.h>
 #import <UIKitExt/TabControl.h>
