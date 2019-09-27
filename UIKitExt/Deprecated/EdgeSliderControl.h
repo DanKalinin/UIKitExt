@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "View.h"
 #import "PickerControl.h"
 #import "NumberPickerControl.h"
 
 
 
 @interface EdgeSliderControl : UIControl
+
+@property (weak, nonatomic) IBOutlet View *view1;
 
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
