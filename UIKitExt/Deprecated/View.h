@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FoundationExt/FoundationExt.h>
+#import <Helpers/Helpers.h>
 
 @class TextFields, TimerControl, CircleView, HandleView, ScrollView;
 @class View, ImageView, TextField, TextView, Button, KeyboardContainerView, ShapeLayerView, GradientLayerView, GradientLayerView2, EmitterLayerView;

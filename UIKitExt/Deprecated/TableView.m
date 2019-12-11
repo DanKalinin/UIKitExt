@@ -7,7 +7,7 @@
 //
 
 #import "TableView.h"
-#import <FoundationExt/FoundationExt.h>
+#import <Helpers/Helpers.h>
 
 NSString *const TableViewCellReuseIdentifier = @"Cell";
 
